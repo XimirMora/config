@@ -27,10 +27,15 @@ set wildmenu
 set noswapfile
 set nobackup
 
+set smarttab
+set autoindent
+set smartindent
 set tabstop=4
 set shiftwidth=4 
 
 set foldmethod=marker
+
+set backspace=indent,eol,start
 " Settings }}}
 
 
@@ -39,8 +44,12 @@ imap <leader>;	<C-S-p>
 nmap <leader>n	:tabnew<Cr>
 map <space> za
 
+" move lines up and down
 map <C-up> :m .-2<CR>==
 map <C-down> :m .+1<CR>==
+
+noremap! <C-BS> <C-W>
+nmap <C-BS> <C-W>
 " Controls }}}
 
 
@@ -54,7 +63,7 @@ cnoreabbr Wq wq
 
 " Functions {{{
 
-map <leader>. :call LineComment()<CR>
+nmap <leader>. :call LineComment()<CR>
 func! LineComment()
 	let comm_sym = GetCommentFt()
 	let line = getline(".")
@@ -76,8 +85,10 @@ func! GetCommentFt()
 		return "#"
 	elseif ft == "c" 
 		return "\/\/"
+	elseif fr == "plaintex"
+		return "%"
 	else
-		return "X"
+		return "#"
 	end
 endfunc
 
