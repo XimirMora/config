@@ -12,11 +12,12 @@ function short_wd {
 	echo $wd
 	}
 
-PS1='$(tput setaf 40)$(short_wd)$(tput sgr0)  '
+PS1=$'\[$(tput setaf 40)\]$(short_wd)\[$(tput sgr0)\] '
 TERM=xterm-256color
 
 # aliases {{{
 alias ls='ls --color=auto'
+alias l='ls --color=auto -a'
 alias grep='grep --color=auto'
 alias vi=vim
 alias size='du -h -d1 | sort -hk1,1'
@@ -25,5 +26,5 @@ alias size='du -h -d1 | sort -hk1,1'
 # envar {{{
 BROWSER=/usr/bin/google-chrome-stabel
 EDITOR=/usr/bin/vim
-
+LOADER_CONF=/boot/loader/loader.conf
 # envar }}}
