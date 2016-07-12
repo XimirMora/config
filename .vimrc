@@ -85,7 +85,7 @@ func! GetCommentFt()
 		return "#"
 	elseif ft == "c" 
 		return "\/\/"
-	elseif fr == "plaintex"
+	elseif ft == "plaintex"
 		return "%"
 	else
 		return "#"
