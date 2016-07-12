@@ -27,4 +27,5 @@ alias size='du -h -d1 | sort -hk1,1'
 BROWSER=/usr/bin/google-chrome-stabel
 EDITOR=/usr/bin/vim
 LOADER_CONF=/boot/loader/loader.conf
+#NVIM=$HOME/.config/nvim/init.vim
 # envar }}}

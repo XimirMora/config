@@ -9,7 +9,7 @@ execute pathogen#infect()
 syntax enable
 set t_Co=256
 colo pencil
-set background=light
+"set background=light
 
 set cursorline
 set laststatus=2
