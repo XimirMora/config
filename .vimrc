@@ -72,7 +72,7 @@ func! GetCommentFt()
 	let ft = &ft
 	if ft == "vim"
 		return "\""
-	elseif ft == "python" || ft == "perl"
+	elseif ft == "python" || ft == "perl" || ft == "sh"
 		return "#"
 	elseif ft == "c" 
 		return "\/\/"
